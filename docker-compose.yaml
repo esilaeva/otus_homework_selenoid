@@ -1,0 +1,64 @@
+services:
+  selenoid:
+    container_name: selenoid
+    image: aerokube/selenoid:1.11.3
+    networks:
+      - selenoid
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/ilana/selenoid/browsers.json:/etc/selenoid/browsers.json:ro
+    command:
+      - "-container-network=selenoid"
+      - "-limit=12"
+  ggr:
+    container_name: ggr
+    depends_on:
+      - selenoid
+    image: aerokube/ggr:1.7.2
+    networks:
+      - selenoid
+    volumes:
+      - /home/ilana/selenoid/grid-router:/etc/grid-router:ro
+    command:
+      - "-guests-allowed"
+      - "-guests-quota=test"
+      - "-verbose"
+      - "-quotaDir=/etc/grid-router/quota"
+    ports:
+      - "4444:4444"
+  ggr-ui:
+    container_name: ggr-ui
+    depends_on:
+      - ggr
+    image: aerokube/ggr-ui:1.2.0
+    networks:
+      - selenoid
+    volumes:
+      - /home/ilana/selenoid/grid-router/quota:/etc/grid-router/quota:ro 
+  selenoid-ui:
+    container_name: selenoid-ui
+    depends_on:
+      - ggr-ui
+    image: aerokube/selenoid-ui:1.8.0
+    networks:
+      - selenoid
+    command:
+      - "--selenoid-uri"
+      - "http://ggr-ui:8888"
+    ports:
+      - "8080:8080"
+  nginx:
+    container_name: nginx
+    depends_on:
+      - selenoid-ui
+    image: nginx:latest
+    networks:
+      - selenoid
+    ports:
+      - "80:80"
+    volumes:
+      - /home/ilana/selenoid/nginx:/etc/nginx/conf.d:ro
+networks:
+  selenoid:
+    name: selenoid
+    external: true
