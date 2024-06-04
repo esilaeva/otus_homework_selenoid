@@ -4,16 +4,9 @@
 сервисов с использованием **Docker Compose**.
 
 ## Структура репозитория
-.
-├── docker-compose.yaml
-├── browsers.json
-├── nginx
-│   └── nginx.conf
-├── grid-router
-│   └── quota
-│       └── quota.xml
-└── selenoid.sh
-
+<p align="center">
+      <img title="structure" src="media/structure.png" alt="structure">
+</p>
 
 ## Файлы и директории
 **docker-compose.yaml**: Файл конфигурации `Docker Compose` для запуска `Selenoid`, `GGR`, `Selenoid UI`, `GGR UI` и `Nginx`.   
