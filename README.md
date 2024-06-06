@@ -19,7 +19,7 @@
 
 ## Настройка и запуск
 Убедитесь, что у вас установлены **[Docker](https://docs.docker.com/engine/install/)** и **[Docker Compose plugin](https://docs.docker.com/compose/install/linux/)**.  
-Если у вас установлена версия `[Copmose standalone](https://docs.docker.com/compose/install/standalone/)`, замените команду `docker compose up -d` в скрипт-файле на `docker-compose up -d`.
+Если у вас установлена версия **[Copmose standalone](https://docs.docker.com/compose/install/standalone/)**, замените команду `docker compose up -d` в скрипт-файле на `docker-compose up -d`.
 Используйте скрипт `selenoid.sh` для автоматического обновления необходимых переменных. 
 
 <p align="center">
