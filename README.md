@@ -9,16 +9,16 @@
 </p>
 
 ## Файлы и директории
-**docker-compose.yaml**: Файл конфигурации `Docker Compose` для запуска `Selenoid`, `GGR`, `Selenoid UI`, `GGR UI` и `Nginx`.   
-**browsers.json**: Файл конфигурации браузеров для `Selenoid`.  
-**nginx.conf**: Конфигурационный файл для `Nginx`, настроенный для проксирования запросов к `Selenoid` и `GGR`.  
-**quota.xml**: Файл конфигурации квот для `GGR`, определяющий доступные браузеры и их версии.   
-**selenoid.sh**: Скрипт для обновления конфигурационных файлов и запуска `Selenoid` и связанных сервисов.
+**docker-compose.yaml** - файл конфигурации `Docker Compose` для запуска `Selenoid`, `GGR`, `Selenoid UI`, `GGR UI` и `Nginx`.   
+**browsers.json** - файл конфигурации браузеров для `Selenoid`.  
+**nginx.conf** - конфигурационный файл для `Nginx`, настроенный для проксирования запросов к `Selenoid` и `GGR`.  
+**quota.xml** - файл конфигурации квот для `GGR`, определяющий доступные браузеры и их версии.   
+**selenoid.sh** - скрипт для обновления конфигурационных файлов и запуска `Selenoid` и связанных сервисов.
 Скрипт автоматически обновляет конфигурационные файлы и создает файл `.env` с необходимыми переменными 
 окружения для `Docker Compose`.
 
 ## Настройка и запуск
-Убедитесь, что у вас установлены **[Docker](https://docs.docker.com/engine/install/)** и **[Docker Compose plugin](https://docs.docker.com/compose/install/linux/)**.
+Убедитесь, что у вас установлены **[Docker](https://docs.docker.com/engine/install/)** и **[Docker Compose plugin](https://docs.docker.com/compose/install/linux/)**.  
 Если у вас установлена версия `Copmose standalone`, замените команду `docker compose up -d` в скрипт-файле на `docker-compose up -d`.
 Используйте скрипт `selenoid.sh` для автоматического обновления необходимых переменных. 
 
