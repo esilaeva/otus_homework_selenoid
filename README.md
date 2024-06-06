@@ -18,9 +18,9 @@
 окружения для `Docker Compose`.
 
 ## Настройка и запуск
-Убедитесь, что у вас установлены **[Docker](https://docs.docker.com/engine/install/)** и **[Docker Compose](https://docs.docker.com/compose/install/linux/)**.
-Используйте скрипт `selenoid.sh` для автоматического обновления необходимых переменных. 
+Убедитесь, что у вас установлены **[Docker](https://docs.docker.com/engine/install/)** и **[Docker Compose plugin](https://docs.docker.com/compose/install/linux/)**.
 Если у вас установлена версия `Copmose standalone`, замените команду `docker compose up -d` в скрипт-файле на `docker-compose up -d`.
+Используйте скрипт `selenoid.sh` для автоматического обновления необходимых переменных. 
 
 <p align="center">
       <img title="selenoid.sh" src="media/variables.png" alt="selenoid.sh">
