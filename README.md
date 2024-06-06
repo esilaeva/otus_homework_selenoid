@@ -1,4 +1,4 @@
-# Разворачивание и подключение Selenoid
+# Подключение Selenoid
 
 Этот репозиторий содержит все необходимые конфигурационные файлы и скрипты для настройки и запуска **Selenoid** и связанных
 сервисов с использованием **Docker** и **Docker Compose**.
@@ -8,7 +8,7 @@
       <img title="structure" src="media/structure.png" alt="structure">
 </p>
 
-## Файлы и директории
+## Файлы проекта
 - **docker-compose.yaml** - файл конфигурации `Docker Compose` для запуска `Selenoid`, `GGR`, `Selenoid UI`, `GGR UI` и `Nginx`.   
 - **browsers.json** - файл конфигурации браузеров для `Selenoid`.  
 - **nginx.conf** - конфигурационный файл для `Nginx`, настроенный для проксирования запросов к `Selenoid` и `GGR`.  
