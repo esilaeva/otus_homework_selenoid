@@ -1,8 +1,7 @@
 # Разворачивание и подключение Selenoid
 
 Этот репозиторий содержит все необходимые конфигурационные файлы и скрипты для настройки и запуска **Selenoid** и связанных
-сервисов с использованием **[Docker](https://docs.docker.com/engine/install/)** и **[Docker Compose](https://docs.docker.com/compose/install/linux/)**.
-Если у вас установлена версия Copmose standalone, замените команду `docker compose up -d` в скрипт-файле на `docker-compose up -d`.
+сервисов с использованием **Docker** и **Docker Compose**.
 
 ## Структура проекта
 <p align="center">
